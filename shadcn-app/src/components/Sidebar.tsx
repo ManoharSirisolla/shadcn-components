@@ -1,8 +1,9 @@
 'use client';
 
 import { Bell, Cookie, CreditCard, Inbox, MessageSquare, Settings, User } from "lucide-react";
-import { Command,  CommandGroup, CommandItem, CommandList, CommandSeparator } from "./ui/command";
+import { Command,  CommandGroup, CommandDemo, CommandList, CommandSeparator } from "./Command";
 import UserItem from "./UserItem";
+import { CommandItem } from "./ui/command";
 
 
 export default function Sidebar() {
