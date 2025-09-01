@@ -1,56 +1,60 @@
 'use client';
 
+import { ResponsiveBump } from '@nivo/bump';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card"
 
-import { ResponsiveBump } from '@nivo/bump'
-
-const MyResponsiveBump = ( props : any ) => {
-   return <ResponsiveBump 
-        data={props.data}
-        colors={{ scheme: 'spectral' }}
-        lineWidth={3}
-        activeLineWidth={6}
-        inactiveLineWidth={3}
-        inactiveOpacity={0.15}
-        pointSize={10}
-        activePointSize={16}
-        inactivePointSize={0}
-        pointColor={{ theme: 'background' }}
-        pointBorderWidth={3}
-        activePointBorderWidth={3}
-        pointBorderColor={{ from: 'serie.color' }}
-        axisLeft={{ legend: 'ranking', legendOffset: -40 }}
-        margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
+const MyResponsiveBump = ({ data }: { data: any }) => {
+  return (
+    <ResponsiveBump
+      data={data}
+      colors={{ scheme: 'spectral' }}
+      lineWidth={3}
+      activeLineWidth={6}
+      inactiveLineWidth={3}
+      inactiveOpacity={0.15}
+      pointSize={10}
+      activePointSize={16}
+      inactivePointSize={0}
+      pointColor={{ theme: 'background' }}
+      pointBorderWidth={3}
+      activePointBorderWidth={3}
+      pointBorderColor={{ from: 'serie.color' }}
+      axisLeft={{ legend: 'ranking', legendOffset: -40 }}
+      margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
     />
-}
+  );
+};
 
 export default function General() {
-
-    
   const data = [
-    
-    [
   {
     "id": "Serie 1",
     "data": [
       {
         "x": "2000",
-        "y": 6
+        "y": 4
       },
       {
         "x": "2001",
-        "y": 3
+        "y": 1
       },
       {
         "x": "2002",
-        "y": 11
+        "y": 7
       },
       {
         "x": "2003",
-        "y": 5
+        "y": 1
       },
       {
         "x": "2004",
-        "y": 6
+        "y": 1
       }
     ]
   },
@@ -59,23 +63,23 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 11
+        "y": 8
       },
       {
         "x": "2001",
-        "y": 5
+        "y": 4
       },
       {
         "x": "2002",
-        "y": 12
+        "y": 5
       },
       {
         "x": "2003",
-        "y": 1
+        "y": 8
       },
       {
         "x": "2004",
-        "y": 10
+        "y": 5
       }
     ]
   },
@@ -84,23 +88,23 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 7
+        "y": 1
       },
       {
         "x": "2001",
-        "y": 11
+        "y": 3
       },
       {
         "x": "2002",
-        "y": 10
+        "y": 1
       },
       {
         "x": "2003",
-        "y": 2
+        "y": 5
       },
       {
         "x": "2004",
-        "y": 7
+        "y": 4
       }
     ]
   },
@@ -109,23 +113,23 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 4
+        "y": 2
       },
       {
         "x": "2001",
-        "y": 4
+        "y": 6
       },
       {
         "x": "2002",
-        "y": 8
+        "y": 12
       },
       {
         "x": "2003",
-        "y": 10
+        "y": 2
       },
       {
         "x": "2004",
-        "y": 8
+        "y": 2
       }
     ]
   },
@@ -134,11 +138,11 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 5
+        "y": 6
       },
       {
         "x": "2001",
-        "y": 8
+        "y": 12
       },
       {
         "x": "2002",
@@ -146,7 +150,7 @@ export default function General() {
       },
       {
         "x": "2003",
-        "y": 7
+        "y": 4
       },
       {
         "x": "2004",
@@ -159,7 +163,7 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 2
+        "y": 9
       },
       {
         "x": "2001",
@@ -167,15 +171,15 @@ export default function General() {
       },
       {
         "x": "2002",
-        "y": 5
+        "y": 9
       },
       {
         "x": "2003",
-        "y": 11
+        "y": 9
       },
       {
         "x": "2004",
-        "y": 1
+        "y": 10
       }
     ]
   },
@@ -184,7 +188,7 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 12
+        "y": 10
       },
       {
         "x": "2001",
@@ -192,11 +196,11 @@ export default function General() {
       },
       {
         "x": "2002",
-        "y": 7
+        "y": 11
       },
       {
         "x": "2003",
-        "y": 9
+        "y": 3
       },
       {
         "x": "2004",
@@ -209,23 +213,23 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 8
+        "y": 11
       },
       {
         "x": "2001",
-        "y": 1
-      },
-      {
-        "x": "2002",
-        "y": 6
-      },
-      {
-        "x": "2003",
         "y": 8
       },
       {
+        "x": "2002",
+        "y": 4
+      },
+      {
+        "x": "2003",
+        "y": 7
+      },
+      {
         "x": "2004",
-        "y": 5
+        "y": 12
       }
     ]
   },
@@ -234,7 +238,7 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 3
+        "y": 7
       },
       {
         "x": "2001",
@@ -242,15 +246,15 @@ export default function General() {
       },
       {
         "x": "2002",
-        "y": 9
+        "y": 6
       },
       {
         "x": "2003",
-        "y": 3
+        "y": 12
       },
       {
         "x": "2004",
-        "y": 2
+        "y": 3
       }
     ]
   },
@@ -259,15 +263,15 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 10
+        "y": 5
       },
       {
         "x": "2001",
-        "y": 12
+        "y": 9
       },
       {
         "x": "2002",
-        "y": 1
+        "y": 10
       },
       {
         "x": "2003",
@@ -275,7 +279,7 @@ export default function General() {
       },
       {
         "x": "2004",
-        "y": 4
+        "y": 8
       }
     ]
   },
@@ -284,23 +288,23 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 1
+        "y": 12
       },
       {
         "x": "2001",
-        "y": 9
+        "y": 5
       },
       {
         "x": "2002",
-        "y": 4
+        "y": 8
       },
       {
         "x": "2003",
-        "y": 4
+        "y": 10
       },
       {
         "x": "2004",
-        "y": 3
+        "y": 7
       }
     ]
   },
@@ -309,11 +313,11 @@ export default function General() {
     "data": [
       {
         "x": "2000",
-        "y": 9
+        "y": 3
       },
       {
         "x": "2001",
-        "y": 6
+        "y": 11
       },
       {
         "x": "2002",
@@ -321,22 +325,25 @@ export default function General() {
       },
       {
         "x": "2003",
-        "y": 12
+        "y": 11
       },
       {
         "x": "2004",
-        "y": 12
+        "y": 6
       }
     ]
   }
 ]
-  ]
-    
-  
 
-
-    return 
-    <div className='w-full h=[400px]'>
-        <MyResponsiveBump data={data} />
-    </div>
+  return (
+    <Card className="w-full" style={{ height: '400px' }}>
+      <CardHeader>
+        <CardTitle>This Week</CardTitle>
+        <CardDescription>These are the results of this week</CardDescription>
+      </CardHeader>
+      <CardContent className='grid gap-4 h-[400px]'>
+      <MyResponsiveBump data={data} />
+      </CardContent>
+    </Card>
+  );
 }
