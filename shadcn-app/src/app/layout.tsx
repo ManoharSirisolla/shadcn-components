@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex items-start justify-between antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex items-start justify-start  antialiased`}
       >
         <Sidebar />
         <main className="grid h-full">
