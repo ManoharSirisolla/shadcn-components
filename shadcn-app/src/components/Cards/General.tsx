@@ -3,10 +3,7 @@
 import { ResponsiveBump } from '@nivo/bump';
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
+  CardContent
 } from "@/components/ui/card"
 
 const MyResponsiveBump = ({ data }: { data: any }) => {
@@ -337,10 +334,6 @@ export default function General() {
 
   return (
     <Card className="w-full" style={{ height: '400px' }}>
-      <CardHeader>
-        <CardTitle>This Week</CardTitle>
-        <CardDescription>These are the results of this week</CardDescription>
-      </CardHeader>
       <CardContent className='grid gap-4 h-[400px]'>
       <MyResponsiveBump data={data} />
       </CardContent>

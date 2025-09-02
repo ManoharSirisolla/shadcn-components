@@ -1,3 +1,4 @@
+import Calendar from "@/components/Calendar/Calendar";
 import General from "@/components/Cards/General";
 import { Card } from "@/components/ui/card";
 
@@ -6,8 +7,8 @@ export default function page() {
     <div className="grid grid-cols-2 gap-[32px]">
    <General />
    <div className="grid gap-[32px]">
-      <Card />
-      <Card />
+      <Calendar />
+      <Calendar />
    </div>
    <div className="grid grid-cols-3 gap-[32px]">
         <Card className="h-[300px]">Hello</Card>

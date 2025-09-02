@@ -1,27 +1,46 @@
-import { ResponsiveCalendar } from '@nivo/calendar'
+'use client';
 
-const MyCalendar = ({ data }) => (
-    <ResponsiveCalendar 
-        data={data}
-        from="2015-03-01"
-        to="2016-07-12"
-        emptyColor="#eeeeee"
-        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
-        yearSpacing={40}
-        monthBorderColor="#ffffff"
-        dayBorderWidth={2}
-        dayBorderColor="#ffffff"
-        legends={[
-            {
-                anchor: 'bottom-right',
-                direction: 'row',
-                translateY: 36,
-                itemCount: 4,
-                itemWidth: 42,
-                itemHeight: 36,
-                itemsSpacing: 14,
-                itemDirection: 'right-to-left'
-            }
-        ]}
-    />
-)
+import { ResponsiveTimeRange } from '@nivo/calendar';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'; 
+
+function generateDataForYear2023() {
+    const data = [];
+    const startDate = new Date("2023-01-01");
+    const endDate = new Date("2023-12-12");
+    const dayInMs = 24 * 60 * 60 * 1000;
+    const totalDays = Math.floor((endDate.getTime() - startDate.getTime()) / dayInMs);
+
+    for (let i = 0; i <= totalDays; i++) {
+        const currentDate = new Date(startDate.getTime() + i * dayInMs);
+        const formattedDate = currentDate.toISOString().split('T')[0]; 
+        const value = Math.floor(Math.random() * 100); 
+        data.push({ day: formattedDate, value });
+    }
+
+    return data;
+}
+
+
+export default function Calendar() {
+    const data = generateDataForYear2023();
+
+    return (
+        <Card>
+            <CardHeader>
+                    <CardTitle>This Week</CardTitle>
+                    <CardDescription>These are the results of this week</CardDescription>
+            </CardHeader>
+            <CardContent className="h-[150px] w-full">
+                <ResponsiveTimeRange
+                    data={data}
+                    from="2023-01-01"
+                    to="2023-12-12"
+                    emptyColor="#eeeeee"
+                    colors={['#61cdbb', '#97e3d5', '#e8c1a0', '#f47560']}
+                    dayBorderWidth={2}
+                    dayBorderColor="#ffffff"
+                />
+            </CardContent>
+        </Card>
+    );
+}
