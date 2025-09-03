@@ -1,11 +1,10 @@
 'use client';
 import { ResponsiveLine } from '@nivo/line'
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 
 const MyResponsiveLine = ({ data }: any) => (
     <ResponsiveLine
         data={data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
         curve="basis"
         axisBottom={{ legend: 'transportation', legendOffset: 36 }}
@@ -290,12 +289,15 @@ export default function Lines() {
 ]
 
   return (
-    <Card className="w-full h-[400px]">
-      <CardContent className="h-full p-4">
-        <div className="h-full w-full">
-          <MyResponsiveLine data={data} />
-        </div>
-      </CardContent>
-    </Card>
+    <Card className="h-[264px]">
+      <CardHeader>
+                    <CardTitle>Lines</CardTitle>
+                    <CardDescription>These are the stats of this year</CardDescription>
+            </CardHeader>
+  <CardContent className="h-full">
+    <MyResponsiveLine data={data} />
+  </CardContent>
+</Card>
+
   )
 }
