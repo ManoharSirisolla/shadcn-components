@@ -5,19 +5,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <div className="h-[400px] p-4 flex flex-col gap-4">
+    <div className="grid grid-cols-2 gap-4 h-[400px]">
   <Card className="flex-1">
     <CardContent>
       <General />
     </CardContent>
   </Card>
+  <div className="flex flex-col flex-1 gap-4">
+    <Card className="flex-1">
+      <CardContent>
+        <Calendar />
+        <Calendar />
+      </CardContent>
+    </Card>
+  </div>
 
-  <Card className="flex-1">
-    <CardContent>
-      <Calendar />
-      <Calendar />
-    </CardContent>
-  </Card>
 
 
 
