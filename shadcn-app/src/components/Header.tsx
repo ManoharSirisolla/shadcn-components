@@ -1,7 +1,7 @@
 "use client";
 
 import { BellIcon } from "lucide-react";
-import { CommandDemo } from "./Command";
+import CommandDemo from "./Command"; // default export
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -30,11 +30,13 @@ export default function Header() {
   const hasUnread = notifications.some((n: any) => !n.read);
 
   return (
-    <header className="flex items-center justify-between p-4 border-b">
-      <CommandDemo />
+    <header className="flex flex-col gap-3 p-4 border-b md:flex-row md:items-center md:justify-between">
+      <div className="flex-1 w-full">
+        <CommandDemo />
+      </div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button className="relative" variant="outline" size="icon">
+          <Button className="relative shrink-0" variant="outline" size="icon">
             <div
               className={`absolute -top-1 right-0 h-3 w-3 rounded-full ${
                 hasUnread ? "bg-green-500" : "bg-neutral-300"

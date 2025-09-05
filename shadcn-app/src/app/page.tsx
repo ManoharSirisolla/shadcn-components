@@ -3,7 +3,6 @@ import { DataTableDemo } from "@/components/Cards/DataTable";
 import General from "@/components/Cards/General";
 import Lines from "@/components/Cards/Lines";
 import { TablesDemo } from "@/components/Cards/Tables";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
   return (

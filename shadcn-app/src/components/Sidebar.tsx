@@ -13,8 +13,8 @@ import {
   Command,
   CommandGroup,
   CommandList,
-} from "./Command";
-import { CommandItem } from "./ui/command";
+  CommandItem,
+} from "@/components/ui/command"; // ✅ correct import
 import UserItem from "./UserItem";
 
 export default function Sidebar() {
@@ -40,12 +40,9 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden md:flex flex-col gap-4 w-[280px] border-r min-h-screen p-4">
-      {/* User info */}
       <div>
         <UserItem />
       </div>
-
-      {/* Menu */}
       <div className="grow">
         <Command className="overflow-visible">
           <CommandList className="overflow-visible">
