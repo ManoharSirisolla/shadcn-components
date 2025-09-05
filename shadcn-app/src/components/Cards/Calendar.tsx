@@ -30,7 +30,7 @@ export default function Calendar() {
                     <CardTitle>Calendar</CardTitle>
                     <CardDescription>These are the numbers of this year</CardDescription>
             </CardHeader>
-            <CardContent className="h-[100px] w-full">
+            <CardContent className="h-[80px] w-full">
                 <ResponsiveTimeRange
                     data={data}
                     from="2023-01-01"

@@ -1,39 +1,37 @@
 import Calendar from "@/components/Cards/Calendar";
+import { DataTableDemo } from "@/components/Cards/DataTable";
 import General from "@/components/Cards/General";
 import Lines from "@/components/Cards/Lines";
-import { Card, CardContent } from "@/components/ui/card";
+import { TablesDemo } from "@/components/Cards/Tables";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <div className="grid grid-cols-2 gap-4 h-[400px]">
-  <Card className="flex-1">
-    <CardContent>
-      <General />
-    </CardContent>
-  </Card>
-  <div className="flex flex-col flex-1 gap-4">
-    <Card className="flex-1">
-      <CardContent>
-        <Calendar />
-        <Calendar />
-      </CardContent>
-    </Card>
-  </div>
-
-
-
-
-
-  
-      <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-      <Lines />
-  <Card className="flex items-center justify-center text-lg font-semibold">
-    Manohar
-  </Card>
-  <Card className="flex items-center justify-center text-lg font-semibold">
-    Sai
-  </Card>
-  </div>
-  </div>
+   <div className="grid gap-8 p-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-auto lg:h-[400px]">
+        <div className="p-4 h-[400px]">
+          <General />
+        </div>
+        <div className="grid grid-rows-2 gap-4 h-[400px]">
+          <div className="p-4">
+            <Calendar />
+          </div>
+          <div className="p-4">
+            <Calendar />
+          </div>
+        </div>
+        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      <div className="flex flex-col border p-4 h-full">
+        <Lines />
+      </div>
+      <div className="flex flex-col border p-4 h-full">
+        <TablesDemo  />
+      </div>
+      <div className="flex flex-col border p-4 h-full">
+        <DataTableDemo />
+      </div>
+    </div>
+    </div>
   );
 }
