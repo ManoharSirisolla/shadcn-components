@@ -39,7 +39,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="hidden md:flex flex-col gap-4 w-[280px] border-r min-h-screen p-4">
+    <aside className="fixed flex flex-col gap-4 w-[300px] p-4 min-h-screen">
       <div>
         <UserItem />
       </div>

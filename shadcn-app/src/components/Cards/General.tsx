@@ -3,7 +3,10 @@
 import { ResponsiveBump } from '@nivo/bump';
 import {
   Card,
-  CardContent
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
 } from "@/components/ui/card"
 
 const MyResponsiveBump = ({ data }: { data: any }) => {
@@ -23,7 +26,8 @@ const MyResponsiveBump = ({ data }: { data: any }) => {
       activePointBorderWidth={3}
       pointBorderColor={{ from: 'serie.color' }}
       axisLeft={{ legend: 'ranking', legendOffset: -40 }}
-      margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
+      margin={{ top: 10, right: 10, bottom: 10, left: 10, }}
+      axisRight={null}
     />
   );
 };
@@ -334,8 +338,12 @@ export default function General() {
 
   return (
     <Card className="w-full" style={{ height: '400px' }}>
+      <CardHeader>
+        <CardTitle>Calendar</CardTitle>
+        <CardDescription>These are the numbers of this year</CardDescription>
+      </CardHeader>
       <CardContent className='grid gap-4 h-[400px]'>
-      <MyResponsiveBump data={data} />
+        <MyResponsiveBump data={data} />
       </CardContent>
     </Card>
   );

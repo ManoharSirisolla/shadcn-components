@@ -29,12 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex items-start justify-between`}
       >
-        <div className="min-w-[300px] bg-red-500 border-r min-h-screen">
+        <div className="hidden lg:flex min-w-[300px] border-r min-h-screen">
           <Sidebar />
         </div>
         <main className="grid w-full h-full">
           <Header />
-          <div className="p-8">
+          <div>
             {children}
           </div>
         </main>
