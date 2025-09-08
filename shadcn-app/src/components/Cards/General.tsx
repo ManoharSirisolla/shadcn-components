@@ -26,7 +26,7 @@ const MyResponsiveBump = ({ data }: { data: any }) => {
       activePointBorderWidth={3}
       pointBorderColor={{ from: 'serie.color' }}
       axisLeft={{ legend: 'ranking', legendOffset: -40 }}
-      margin={{ top: 10, right: 10, bottom: 10, left: 10, }}
+      margin={{ top: 20, right: 20, bottom: 20, left: 20, }}
       axisRight={null}
     />
   );
@@ -337,10 +337,10 @@ export default function General() {
 ]
 
   return (
-    <Card className="w-full" style={{ height: '400px' }}>
+    <Card className="w-full overflow-hidden" style={{ height: '400px' }}>
       <CardHeader>
-        <CardTitle>Calendar</CardTitle>
-        <CardDescription>These are the numbers of this year</CardDescription>
+        <CardTitle>This Week</CardTitle>
+        <CardDescription>These are the results of this week</CardDescription>
       </CardHeader>
       <CardContent className='grid gap-4 h-[400px]'>
         <MyResponsiveBump data={data} />

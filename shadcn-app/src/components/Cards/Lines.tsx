@@ -289,7 +289,7 @@ export default function Lines() {
 ]
 
   return (
-    <Card className="h-[500px]">
+    <Card className="h-[400px]">
       <CardHeader>
                     <CardTitle>Lines</CardTitle>
                     <CardDescription>These are the stats of this year</CardDescription>

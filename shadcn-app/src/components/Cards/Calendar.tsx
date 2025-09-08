@@ -25,7 +25,7 @@ export default function Calendar() {
     const data = generateDataForYear2023();
 
     return (
-        <Card>
+        <Card >
             <CardHeader>
                     <CardTitle>Calendar</CardTitle>
                     <CardDescription>These are the numbers of this year</CardDescription>
